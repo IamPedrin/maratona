@@ -1,35 +1,3 @@
 4 4
 0 0
 0 2
-
-    int m, n;
-
-    while (cin >> m >> n)
-    {
-        long int fat1 = 1, fat2 = 1;
-
-        if (m == 0)
-        {
-            fat1 = 1;
-        }
-        else
-        {
-            for (int i = m; i >= 1; i--)
-            {
-                fat1 = fat1 * i;
-            }
-        }
-
-        if (n == 0)
-        {
-            fat2 = 1;
-        }
-        else
-        {
-            for (int i = n; i >= 1; i--)
-            {
-                fat2 = fat2 * i;
-            }
-        }
-
-        cout << fat1 + fat2 << "\n";
