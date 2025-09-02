@@ -9,5 +9,5 @@ int main()
     cin >> n;
 
     cout << "NOTAS:\n";
-
+    
 }
