@@ -10,34 +10,20 @@ int main()
     cin >> t;
     cin.ignore();
 
-    while (t)
+    while (t--)
     {
         cin >> entrada;
         int numString = entrada.find('!');
         int n = stoi(entrada.substr(0, numString));
         int qtdExc = count(entrada.begin(), entrada.end(), '!');
 
-        int resultado = 1;
-        if (qtdExc == 1)
+        long int resultado = 1;
+        
+        for (int i = 0; n - qtdExc * i >= 1; i++)
         {
-            for (int i = 1; i <= n; i++)
-            {
-                resultado *= i;
-            }
-        }
-        else
-        {
-            resultado = n;
-            for (int i = 1; i <= qtdExc; i++)
-            {
-                if (n - (qtdExc * i) != 0)
-                {
-                    resultado *= (n - (qtdExc * i));
-                }
-            }
+            resultado *= (n - qtdExc * i);
         }
 
         cout << resultado << "\n";
-        t--;
     }
 }
