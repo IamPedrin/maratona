@@ -8,6 +8,7 @@ int main()
     string entrada;
 
     cin >> t;
+    cin.ignore();
 
     while (t)
     {
@@ -31,7 +32,7 @@ int main()
             {
                 if (n - (qtdExc * i) != 0)
                 {
-                    resultado *= abs(n - qtdExc * i);
+                    resultado *= (n - (qtdExc * i));
                 }
             }
         }
